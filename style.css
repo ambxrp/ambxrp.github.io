@@ -9,10 +9,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    /* background-color: #121212; Black background */
-    /* color: #eaeaea; Light text color for contrast */
     margin: 0;
     padding: 0;
+    background-color: #1A1A1D; /* Dark gray background */
+    color: #EAEAEA; /* Light gray text */
 }
 
 /* Navbar styling */
@@ -28,8 +28,7 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    /* color: #eaeaea; Light text for the logo */
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
@@ -43,29 +42,9 @@ body {
 }
 
 .nav-links a {
-    /* color: #eaeaea; Light text color */
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect for navigation links */
-/* .nav-links a:hover {
-    color: #D8BFD8; 
-    transform: scale(1.1);
-} */
-
-/* Burger menu styling for mobile */
-.burger-menu {
-    display: none;
-    cursor: pointer;
-}
-
-.burger-menu .line {
-    width: 25px;
-    height: 3px;
-    /* background-color: #eaeaea; Light lines for burger menu */
-    margin: 5px;
 }
 
 @media (max-width: 768px) {
@@ -74,7 +53,6 @@ body {
         position: absolute;
         top: 60px;
         right: 0;
-        /* background-color: #1a1a1a; */
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -86,10 +64,6 @@ body {
 
     .nav-links li {
         margin: 1rem 0;
-    }
-
-    .burger-menu {
-        display: block;
     }
 }
 
@@ -103,22 +77,15 @@ section {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for sections */
-/* section:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    transform: translateY(-10px);
-} */
-
-h1 {
-    font-size: 2rem;
-    /* color: #eaeaea; Light header text */
+h1, h2 {
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    color: #17A2B8;
 }
 
 p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    /* color: #eaeaea; */
 }
 
 ul {
@@ -137,7 +104,6 @@ li {
 }
 
 .project {
-    /* background-color: #292929; Slightly lighter grey for projects */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -157,11 +123,6 @@ li {
     }
 }
 
-/* Lavender-colored links */
-/* a {
-    /* color: #D8BFD8; Lavender color for links */
-/* }  */
-
 a:hover {
     color: #eaeaea; /* Hover effect to lighten the links */
 }
@@ -174,7 +135,6 @@ a:hover {
 }
 
 .project {
-    /* background-color: #292929; */
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -182,54 +142,23 @@ a:hover {
 }
 
 .project h2 {
-    /* color: #eaeaea; */
     margin-bottom: 1rem;
 }
 
 .project p {
-    /* color: #d1d1d1; */
     margin-bottom: 1rem;
 }
 
 .project a {
-    /* color: #D8BFD8; Lavender color for project links */
     text-decoration: none;
     font-weight: bold;
 }
-
-/* .project a:hover { */
-    /* color: #eaeaea; Lighten on hover */
-/* } */
 
 /* Hover effect for projects */
 .project:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
-
-/* Styling for the dynamic project details section */
-.project-details {
-    margin-top: 20px;
-    padding: 20px;
-    /* background-color: #292929; */
-    /* color: #eaeaea; */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* .project-details h2 {
-    /* color: #D8BFD8; Lavender color for titles */
-/* } */ 
-
-.project-details a {
-    /* color: #D8BFD8; */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* .project-details a:hover {
-    color: #eaeaea;
-} */
 
 /* Close button styling */
 .close-btn {
@@ -256,18 +185,6 @@ a:hover {
     color: #eaeaea;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Overall page styling */
-body {
-    background-color: #1A1A1D; /* Dark gray background */
-    color: #EAEAEA; /* Light gray text */
-    /* font-family: Arial, sans-serif; */
-}
-
-/* Headings */
-h1, h2 {
-    color: #17A2B8; /* Teal for headings */
 }
 
 /* Links */
@@ -301,14 +218,6 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
-/* .project:hover {
-    transform: scale(1.05);
-} */
-
-/* .project {
-    transition: all 0.3s ease-in-out;
-} */
-
 .project:hover {
     transform: translateY(-10px); /* Subtle lift effect */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -332,6 +241,7 @@ section {
 }
 
 .project-details a {
+    text-decoration: none;
     color: #FA7268; /* Coral for links */
     font-weight: bold;
 }
