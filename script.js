@@ -1,12 +1,5 @@
-// Toggle the navigation menu on mobile
-const burgerMenu = document.getElementById('burger-menu');
 const navLinks = document.getElementById('nav-links');
 
-burgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
-
-// Smooth scroll for navigation links
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -18,13 +11,9 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
             top: targetElement.offsetTop - 80,
             behavior: 'smooth'
         });
-
-        // Close the mobile menu when a link is clicked
-        navLinks.classList.remove('show');
     });
 });
 
-// Detailed information for each project
 const projectDetails = {
     gitlab: {
         title: "GitLab Internship",
@@ -41,10 +30,8 @@ const projectDetails = {
 function showProjectDetails(projectKey) {
     const container = document.getElementById('projectDetailsContainer');
 
-    // Clear existing content
     container.innerHTML = '';
 
-    // Create new content based on the selected project
     const title = document.createElement('h2');
     title.innerText = projectDetails[projectKey].title;
 
@@ -54,27 +41,23 @@ function showProjectDetails(projectKey) {
     const link = document.createElement('a');
     link.href = projectDetails[projectKey].link;
     link.innerText = "View Project";
-    link.target = '_blank'; // Open in new tab
+    link.target = '_blank';
 
-    // Create the close button ("X")
     const closeButton = document.createElement('span');
-    closeButton.innerText = '×'; // X symbol
+    closeButton.innerText = '×';
     closeButton.classList.add('close-btn');
     closeButton.onclick = function() {
-        container.style.display = 'none'; // Hide the container when "X" is clicked
+        container.style.display = 'none';
     };
 
-    // Append new content to the container
     container.appendChild(closeButton);
     container.appendChild(title);
     container.appendChild(details);
     container.appendChild(link);
 
-    // Show the container when a project is clicked
-    container.style.display = 'block'; // Change to block to show the container
+    container.style.display = 'block';
+    container.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-
-// Add event listeners for each project
 document.getElementById('gitlabProject').addEventListener('click', () => showProjectDetails('gitlab'));
 document.getElementById('amexProject').addEventListener('click', () => showProjectDetails('amex'));
